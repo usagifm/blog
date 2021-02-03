@@ -36,7 +36,7 @@
         </textarea>
       </div>
       <div class="p-2 w-full">
-        <label for="password">Password</label>
+        <label for="password">Photo</label>
         <input
           @change="selectFile"
           class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"

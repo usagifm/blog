@@ -26270,7 +26270,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "p-2 w-full" }, [
-            _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
+            _c("label", { attrs: { for: "password" } }, [_vm._v("Photo")]),
             _vm._v(" "),
             _c("input", {
               staticClass:
@@ -26445,7 +26445,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "p-2 w-full" }, [
-            _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
+            _c("label", { attrs: { for: "password" } }, [_vm._v("Photo")]),
             _vm._v(" "),
             _c("input", {
               staticClass:
