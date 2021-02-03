@@ -1,5 +1,5 @@
- import Home from './components/Home';
- import Detail from './components/Detail';
+import Home from './components/Home';
+import Detail from './components/Detail';
 import About from './components/About.vue';
 import Login from './components/Login.vue';
 import Register from './components/Register.vue';
@@ -36,15 +36,15 @@ export default {
 
 
             beforeEnter: (to, from, next) => {
-                axios.get('/api/authenticated').then(()=>{
+                axios.get('/api/authenticated').then(() => {
 
-                    return next({name : 'Dashboard'})
-      
-                }).catch(()=>{
+                    return next({ name: 'Dashboard' })
+
+                }).catch(() => {
 
                     next();
 
- 
+
 
                 })
             }
@@ -54,72 +54,75 @@ export default {
             component: Register,
 
             beforeEnter: (to, from, next) => {
-                axios.get('/api/authenticated').then(()=>{
+                axios.get('/api/authenticated').then(() => {
 
-                    return next({name : 'Dashboard'})
-      
-                }).catch(()=>{
+                    return next({ name: 'Dashboard' })
+
+                }).catch(() => {
 
                     next();
 
- 
+
 
                 })
             }
 
         },
-        {   name: "Dashboard",
+        {
+            name: "Dashboard",
             path: '/dashboard',
             component: Dashboard,
 
             beforeEnter: (to, from, next) => {
-                axios.get('/api/authenticated').then(()=>{
+                axios.get('/api/authenticated').then(() => {
 
                     next();
-                }).catch(()=>{
+                }).catch(() => {
 
-                    return next({name : 'Login'})
+                    return next({ name: 'Login' })
 
                 })
             }
         },
-        {   name: "Create",
-        path: '/article/create',
-        component: Create,
+        {
+            name: "Create",
+            path: '/article/create',
+            component: Create,
 
-        beforeEnter: (to, from, next) => {
-            axios.get('/api/authenticated').then(()=>{
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/authenticated').then(() => {
 
-                next();
-            }).catch(()=>{
+                    next();
+                }).catch(() => {
 
-                return next({name : 'Login'})
+                    return next({ name: 'Login' })
 
-            })
-        }
-    },
-    {   name: "Update",
-    path: '/article/update/:id',
-    component: Update,
+                })
+            }
+        },
+        {
+            name: "Update",
+            path: '/article/update/:id',
+            component: Update,
 
-    beforeEnter: (to, from, next) => {
-        axios.get('/api/authenticated').then(()=>{
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/authenticated').then(() => {
 
-            next();
-        }).catch(()=>{
+                    next();
+                }).catch(() => {
 
-            return next({name : 'Login'})
+                    return next({ name: 'Login' })
 
-        })
-    }
-},
+                })
+            }
+        },
         {
             path: '/about',
-            component: About 
-        } ,
-         {
+            component: About
+        },
+        {
             path: '/example',
-            component: Example 
+            component: Example
         }
 
 

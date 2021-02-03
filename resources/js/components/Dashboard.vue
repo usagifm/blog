@@ -1,7 +1,7 @@
 <template>
-<div>
+  <div>
     <div class="text-2xl text-gray-800">
-        Dashboard Admin   
+      Dashboard Admin
       <button
         @click.prevent="logout"
         type="submit"
@@ -9,12 +9,7 @@
       >
         Sign Out
       </button>
-
-
     </div>
-    <!-- <code>{{user}}</code> -->
-
-
 
     <div class="p-2 w-full mt-4">
       <router-link to="/article/create">
@@ -129,9 +124,7 @@ export default {
   },
   methods: {
     logout() {
-
-
-                  swal
+      swal
         .fire({
           title: "Sign Out?",
           text: "Bye bye !",
@@ -150,14 +143,10 @@ export default {
             });
 
             axios.post("/api/logout").then(() => {
-        this.$router.push({ name: "Home" });
-      });
-      
+              this.$router.push({ name: "Home" });
+            });
           }
         });
-
-
-    
     },
 
     deleteArticle(id) {
